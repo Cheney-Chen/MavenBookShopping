@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/BookShopping">
+    <Resource name="jdbc/bookShopping" 
+           auth="Container" type="javax.sql.DataSource"
+           maxActive="1" maxIdle="1" maxWait="10000" username="app" 
+           password="app" driverClassName="org.apache.derby.jdbc.ClientDriver"
+           url="jdbc:derby://localhost:1527/BookShopping" />
+</Context>
