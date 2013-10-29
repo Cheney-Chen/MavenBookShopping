@@ -11,17 +11,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Book Page</title>
-        <script>
-             function checkNaN(obj){
-                if(isNaN(obj.value)||obj.value===""){
-                    obj.value="請輸入數字";
-                    obj.select();
-                    return false;
-                }
-                return true;
-            }
-            
-        </script>
     </head>
     <body>
         <h1>Search Book</h1>

@@ -11,11 +11,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Page</title>
+        <script>
+            function checkEmpty(form) {
+                if (form.id.value === ""||form.password.value === "") {
+                    alert("pls enter");
+                    return false;
+                }
+                return true;
+            }
+
+        </script>
     </head>
     <body>
         <h1>Register</h1>
         <c:import url="BookStoreHyperLink.jsp"></c:import>
-        <form action="UserRegister.do" method="post" >
+        ${error}
+        <form action="UserRegister.do" method="post" onsubmit="return checkEmpty(this)" >
             <ul>
                 <li>ID :<input name="id" value=""/></li>
                 <li>password :<input name="password" value=""/></li>

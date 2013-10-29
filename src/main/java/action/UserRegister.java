@@ -6,6 +6,8 @@ package action;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
@@ -39,13 +41,13 @@ public class UserRegister extends HttpServlet {
         String id = request.getParameter("id");
         String password = request.getParameter("password");
         String page = Error_View;
-
         UserService userService = (UserService) getServletContext().getAttribute("userService");
 
         if (!userService.IsUserExist(id)) {
             userService.addUser(id, password);
             request.getSession().setAttribute("userLogin", id);
             page = Success_View;
+            request.setAttribute("error", "user was existed");
         }
         response.sendRedirect(page);
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/BookShopping">
+<Context antiJARLocking="true" path="/MavenBookShopping">
     <Resource name="jdbc/bookShopping" 
            auth="Container" type="javax.sql.DataSource"
            maxActive="1" maxIdle="1" maxWait="10000" username="app" 
